@@ -5,21 +5,21 @@
 
 ### Setting up Java
 Perform the following steps: 
-1. If Oracle provided JVM is going to be used, then it is necessary to apply the JCE  Unlimited Strength Jurisdiction Policy Files, which contain no restriction on cryptographic strengths: 
-  a.	Download the Java Cryptography Extension (JCE) Unlimited Strength Policy  Files from Oracle: 
-    - For Java 7: http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
-    - For Java 8: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
-  b.	Uncompress and extract the downloaded zip file (it contains README.txt and two jar files). 
-  c.	For the installation, please follow the instructions in the README.txt file. 
+If Oracle provided JVM is going to be used, then it is necessary to apply the JCE  Unlimited Strength Jurisdiction Policy Files, which contain no restriction on cryptographic strengths: 
+a.  Download the Java Cryptography Extension (JCE) Unlimited Strength Policy  Files from Oracle: 
+  - For Java 7: http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+  - For Java 8: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+b.  Uncompress and extract the downloaded zip file (it contains README.txt and two jar files). 
+c.  For the installation, please follow the instructions in the README.txt file. 
 
 ### Setting up Tomcat
 Some already provided jars need to be added to the libraries of the Tomcat web-server. These jars may be found under AdditionalFiles directory in the binary for your application server, in the eIDAS release bundle. 
 If you are using Tomcat 7: 
-1.	Create a folder named shared in $TOMCAT_HOME
-2.	Create a subfolder named  lib in $TOMCAT_HOME/shared.
-3.	Edit the file $TOMCAT_HOME/conf/catalina.properties and change the property shared.loader so that it reads: 
+1.  Create a folder named shared in $TOMCAT_HOME
+2.  Create a subfolder named  lib in $TOMCAT_HOME/shared.
+3.  Edit the file $TOMCAT_HOME/conf/catalina.properties and change the property shared.loader so that it reads: 
 shared.loader=${catalina.home}/shared/lib/*.jar 
-4.	Copy the files below to the new shared/lib directory: 
+4.  Copy the files below to the new shared/lib directory: 
 xml-apis-1.4.01.jar 
 resolver-2.9.1.jar 
 serializer-2.7.2.jar 
@@ -27,7 +27,7 @@ xalan-2.7.2.jar
 endorsed/xercesImpl-2.11.0.jar 
 
 If you are using Tomcat 8:  
-1.	Copy the files below to the existing lib directory on the application server. 
+1.  Copy the files below to the existing lib directory on the application server. 
 xml-apis-1.4.01.jar 
 resolver-2.9.1.jar 
 serializer-2.7.2.jar (rename this file to serializer.jar) 
