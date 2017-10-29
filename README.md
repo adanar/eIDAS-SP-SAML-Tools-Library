@@ -5,12 +5,12 @@
 
 ### Setting up Java
 Perform the following steps: 
-1.	If Oracle provided JVM is going to be used, then it is necessary to apply the JCE  Unlimited Strength Jurisdiction Policy Files, which contain no restriction on cryptographic strengths: 
-a.	Download the Java Cryptography Extension (JCE) Unlimited Strength Policy  Files from Oracle: 
-For Java 7: http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
-For Java 8: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
-b.	Uncompress and extract the downloaded zip file (it contains README.txt and two jar files). 
-c.	For the installation, please follow the instructions in the README.txt file. 
+1. If Oracle provided JVM is going to be used, then it is necessary to apply the JCE  Unlimited Strength Jurisdiction Policy Files, which contain no restriction on cryptographic strengths: 
+  a.	Download the Java Cryptography Extension (JCE) Unlimited Strength Policy  Files from Oracle: 
+    - For Java 7: http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+    - For Java 8: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+  b.	Uncompress and extract the downloaded zip file (it contains README.txt and two jar files). 
+  c.	For the installation, please follow the instructions in the README.txt file. 
 
 ### Setting up Tomcat
 Some already provided jars need to be added to the libraries of the Tomcat web-server. These jars may be found under AdditionalFiles directory in the binary for your application server, in the eIDAS release bundle. 
