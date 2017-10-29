@@ -106,54 +106,58 @@ The final step in the integration procedure is the use of the eIDAS SP SAML Tool
 eu.eidas.sp.SpAuthenticationRequestData
 
 Class containing the bundle of information fully describing a Authentication Request.
-Provides the following methods:
-    - String getSaml():
-Returns the encrypted, signed SAML document representing the request, to be sent to the eIDAS Node.
-Parameters: none
-Returns: the string containing the SAML document
-    - String getID()
-Returns the ID representing this request. This information is mainly used to match the request with its corresponding response.
-Parameters: none
-Returns: the string representing the Request ID
 
+Provides the following methods:
+
+    - String getSaml():
+    Returns the encrypted, signed SAML document representing the request, to be sent to the eIDAS Node.
+    Parameters: none
+    Returns: the string containing the SAML document
+    - String getID()
+    Returns the ID representing this request. This information is mainly used to match the request with its corresponding response.
+    Parameters: none
+    Returns: the string representing the Request ID
 
 eu.eidas.sp.SpAuthenticationResponseData
+
 Class containing the bundle of information fully describing an Authentication Response.
+
 Provides the following methods:
+
     -ArrayList<String[]> getAttributes()
-Returns a list with the requested authentication attributes and their values.
-Parameters: none
-Returns: the list of Attributes and their values. Each entry in the list represents a single Attribute and contains an array of Strings, which in turn contains 3 cells:
-Cell 0: Attribute name
-Cell 1: true/false. Depending on whether the attribute is mandatory or optional.
-Cell 2: Attribute value
+    Returns a list with the requested authentication attributes and their values.
+    Parameters: none
+    Returns: the list of Attributes and their values. Each entry in the list represents a single Attribute and contains an array of Strings, which in turn contains 3 cells:
+    Cell 0: Attribute name
+    Cell 1: true/false. Depending on whether the attribute is mandatory or optional.
+    Cell 2: Attribute value
     -String getID()
-Returns the ID representing this response.
-Parameters: none
-Returns: the string representing the Response ID
+    Returns the ID representing this response.
+    Parameters: none
+    Returns: the string representing the Response ID
     -String getResponseToID()
-Returns the ID of the request that triggered this response. This information is mainly used to match the request with its corresponding response.
-Parameters: none
-Returns: the string representing the corresponding Request ID
+    Returns the ID of the request that triggered this response. This information is mainly used to match the request with its corresponding response.
+    Parameters: none
+    Returns: the string representing the corresponding Request ID
     -String getResponseXML()
-Returns the entire decrypted, response data, in XML form.
-Parameters: none
-Returns: the string representing the XML representing the Response data.
+    Returns the entire decrypted, response data, in XML form.
+    Parameters: none
+    Returns: the string representing the XML representing the Response data.
     -String getStatusCode()
-Returns the Status Code of the response.
-Parameters: none
-Returns: the string representing the Status Code of the response.
-“urn:oasis:names:tc:SAML:2.0:status:Success”: Authentication success
-“urn:oasis:names:tc:SAML:2.0:status:Requester”: Error occurred
-“urn:oasis:names:tc:SAML:2.0:status:Responder”: IdP Authentication error
+    Returns the Status Code of the response.
+    Parameters: none
+    Returns: the string representing the Status Code of the response.
+    “urn:oasis:names:tc:SAML:2.0:status:Success”: Authentication success
+    “urn:oasis:names:tc:SAML:2.0:status:Requester”: Error occurred
+    “urn:oasis:names:tc:SAML:2.0:status:Responder”: IdP Authentication error
     -String getStatusMessage()
-Returns a Human readable message representing the status (and reason of) of the response.
-Parameters: none
-Returns: the string representing a Human readable message representing the status (and the reason for that status) of the response.
+    Returns a Human readable message representing the status (and reason of) of the response.
+    Parameters: none
+    Returns: the string representing a Human readable message representing the status (and the reason for that status) of the response.
     -String getLevelOfAssurance()
-Returns the Level of Assurance (Low, Substantial, High) provided in this response.
-Parameters: none
-Returns: the string representing the LOA of this response.
+    Returns the Level of Assurance (Low, Substantial, High) provided in this response.
+    Parameters: none
+    Returns: the string representing the LOA of this response.
 
 
 eu.eidas.sp.SpEidasSamlTools
