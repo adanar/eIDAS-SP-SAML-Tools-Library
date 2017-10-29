@@ -75,7 +75,7 @@ EncryptModule_SP.xml
     <entry key="keyStorePassword">keystore_password</entry>
     <entry key="keyPassword">SP_certificate_password</entry>
 
-...
+    ...
 
     <!--  If not present then no decryption will be applied on response -->
     <!-- Certificate containing instance private key-->
@@ -86,17 +86,17 @@ EncryptModule_SP.xml
 
 sp.properties
 
-sp.return=URL of the return page (e.g.: http://84.205.248.180:80/ReturnPage.jsp). 
-This page receives and processes the authentication response data from the eIDAS Infrastructure.
-….
-sp.metadata.url=URL of the metadata page (e.g.:http://84.205.248.180:80/metadata.jsp). This is the URL under which the already provided metadata.jsp page is located
-…..
-sp.qaalevel=# 
-The level of Assurance required by this SP for the provided authentication data.
-1=Non-existent
-2=Low
-3=Substantial
-4=High
+    sp.return=URL of the return page (e.g.: http://84.205.248.180:80/ReturnPage.jsp). 
+    This page receives and processes the authentication response data from the eIDAS Infrastructure.
+    ….
+    sp.metadata.url=URL of the metadata page (e.g.:http://84.205.248.180:80/metadata.jsp). This is the URL under which the already provided metadata.jsp page is located
+    …..
+    sp.qaalevel=#
+    The level of Assurance required by this SP for the provided authentication data.
+    1=Non-existent
+    2=Low
+    3=Substantial
+    4=High
 
 Now that the eIDAS SP SAML Tools Library is configured, it needs to be integrated with the SP. The next step in doing so is to store the Library JAR file in a folder located inside the CLASSPATH of the web-server, so that the web-server can locate the library at run-time.
 
