@@ -47,9 +47,10 @@ The aforementioned directory contains the file eidasKeystore.jks, which must con
 4.	Provide the Greek eIDAS Node team with the public certificate of the SP, to be added to the Greek eIDAS Node list of trusted SPs.
 
 ### Configuring the eIDAS SP SAML Tools Library
-The first step in configuring the eIDAS SP SAML Tools Library requires the modification of a few configuration files. These files are located in the root folder of the SPEIDASSAMLTools.jar. In each of the following configuration files, replace the existing entries with the following information (bold-faced values need to be replaced with the corresponding value):
+The first step in configuring the eIDAS SP SAML Tools Library requires the modification of a few configuration files. These files are located in the root folder of the SPEIDASSAMLTools.jar. In each of the following configuration files, replace the existing entries with the following information:
 
 SignModule_SP.xml
+
         <entry key="response.sign.assertions">true</entry>
         <entry key="keyStorePath"> eidasKeystore.jks</entry>
         <entry key="keyStorePassword">keystore_password</entry>
@@ -67,6 +68,7 @@ SignModule_SP.xml
 
 
 EncryptModule_SP.xml
+
     <!-- Key Encryption algorithm -->
     <entry key="key.encryption.algorithm">http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p</entry>
     <entry key="keyStorePath"> eidasKeystore.jks</entry>
@@ -83,6 +85,7 @@ EncryptModule_SP.xml
 
 
 sp.properties
+
 sp.return=URL of the return page (e.g.: http://84.205.248.180:80/ReturnPage.jsp). 
 This page receives and processes the authentication response data from the eIDAS Infrastructure.
 ….
