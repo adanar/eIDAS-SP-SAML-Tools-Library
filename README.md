@@ -104,13 +104,14 @@ Now that the eIDAS SP SAML Tools Library is configured, it needs to be integrate
 The final step in the integration procedure is the use of the eIDAS SP SAML Tools Library in order to be able to request and receive Authentication services. For this reason, the Library provides the following API classes and methods:
 
 eu.eidas.sp.SpAuthenticationRequestData
+
 Class containing the bundle of information fully describing a Authentication Request.
 Provides the following methods:
-    -String getSaml():
+    - String getSaml():
 Returns the encrypted, signed SAML document representing the request, to be sent to the eIDAS Node.
 Parameters: none
 Returns: the string containing the SAML document
-    -String getID()
+    - String getID()
 Returns the ID representing this request. This information is mainly used to match the request with its corresponding response.
 Parameters: none
 Returns: the string representing the Request ID
