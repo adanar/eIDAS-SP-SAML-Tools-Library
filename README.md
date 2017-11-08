@@ -161,31 +161,34 @@ Provides the following methods:
 
 
 eu.eidas.sp.SpEidasSamlTools
+
 Class which provides the main Library methods for processing Authentication Requests and Responses.
 Provides the following methods:
+
     -SpAuthenticationRequestData generateEIDASRequest(ArrayList<String> pal, String citizenCountry, String serviceProviderCountry)
-Constructs a new eIDAS SAML Authentication Request.
-Parameters: 
-pal: the list of eIDAS Attribute names to be requested
-citizenCountry: a String representing the Country Code of the citizen to be authenticated
-serviceProviderCountry: a String representing the Country Code the SP operated in. In this case, this value should always be “GR”.
-Returns: a SpAuthenticationRequestData object representing the constructed Request.
+	Constructs a new eIDAS SAML Authentication Request.
+	Parameters: 
+	pal: the list of eIDAS Attribute names to be requested
+	citizenCountry: a String representing the Country Code of the citizen to be authenticated
+	serviceProviderCountry: a String representing the Country Code the SP operated in. In this case, this value should always be “GR”.
+	Returns: a SpAuthenticationRequestData object representing the constructed Request.
     -SpAuthenticationResponseData processResponse(String SAMLResponse, String remoteHost)
-Processes the Authentication Response.
-Parameters: 
-SAMLResponse: The String containing the eIDAS Node provided Authentication Response. The String is contained as a parameter in the HTTP request used by the eIDAS Node to redirect the response to the SP’s Return Page.
-remoteHost: the URL representing the host which provided the response. This is also contained as a parameter in the HTTP request. 
-Returns: a SpAuthenticationResponseData object representing the Response data.
+	Processes the Authentication Response.
+	Parameters: 
+	SAMLResponse: The String containing the eIDAS Node provided Authentication Response. The String is contained as a parameter in the HTTP request used by the eIDAS Node to redirect the response to the SP’s Return Page.
+	remoteHost: the URL representing the host which provided the response. This is also contained as a parameter in the HTTP request. 
+	Returns: a SpAuthenticationResponseData object representing the Response data.
     -String getNodeUrl()
-Provides the SP with the URL of the eIDAS Node. This is the URL the Authentication Request is sent to, via HTTP POST or GET.
-Parameters: None
-Returns: the URL of the eIDAS Node.
+	Provides the SP with the URL of the eIDAS Node. This is the URL the Authentication Request is sent to, via HTTP POST or GET.
+	Parameters: None
+	Returns: the URL of the eIDAS Node.
  
 
-Sample SP Integration code
+### Sample SP Integration code
 
 
 metadata.jsp
+
     <%@ page language="java" contentType="application/xml; charset=US-ASCII" pageEncoding="US-ASCII"%>
     <%@ page import="eu.eidas.sp.metadata.GenerateMetadataAction" %>
     <%
@@ -194,6 +197,7 @@ metadata.jsp
     %>
 
 Login.jsp
+    
     <%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII"%>
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
@@ -234,6 +238,7 @@ Login.jsp
 
 
 ReturnPage.jsp
+    
     <%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII"%>
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
